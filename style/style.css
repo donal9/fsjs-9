@@ -1,0 +1,232 @@
+body{
+  background-color:#fff;
+  font-family:Arial, Helvetica, sans-serif;
+  margin: 0;
+  height: 0;
+  box-sizing: border-box;
+}
+.main{
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.main h2 p{
+  text-align: left;
+}
+.right{
+  background-color:#53bd84;
+  float: left;
+  width: 20%;
+  padding:70px;
+  margin-top: 7px;
+  text-align: center;
+}
+nav{
+  margin:auto;
+  text-align: center;
+  width: 100%;
+} 
+nav ul ul{
+  display: none;
+}
+nav ul li:hover > ul{
+  display: block;
+  width: 150px;
+}
+nav ul{
+  background: #53bd84;
+  padding: 0 20px;
+  list-style: none;
+  position: relative;
+  display: inline-table;
+  width: 100%;
+}
+nav ul:after{
+  content: ""; 
+  clear:both; 
+  display: block;
+}
+nav ul li{
+  float:left;
+}
+nav ul li:hover{
+  background:#666;
+}
+nav ul li:hover a{
+  color:#fff;
+}
+nav ul li a{
+  display: block;
+  padding: 25px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul ul li{
+  float:none;
+  border-top: 1px soild #53bd84;
+  border-bottom: 1px solid #53bd84;
+  position: relative;
+}
+nav ul ul li a{
+  padding: 15px 40px;
+  color: #fff;
+}
+nav ul ul li a:hover{
+  background-color: #666;
+}
+nav ul ul ul{
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+.step{
+  font-size: 17px;
+
+}
+.artikel{
+  margin: 0 auto;
+  padding-top: 32px;
+  max-width: 640px;
+  width: 94%;
+}
+.artikel h1{
+  margin-top: 0;
+}
+.artikel p{
+  margin-bottom: 0;
+  font-size: small;
+}
+.content .left-side::before{
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.content .left-side .details{
+  margin: 14px;
+  text-align: center;
+}
+.content .left-side .details i{
+  font-size: 30px;
+  color: #53bd84;
+  margin-bottom: 10px;
+}
+.content .left-side .details .topic{
+  font-size: 18px;
+  font-weight: 500;
+}
+.content .left-side .details .text-one,
+.content .left-side .details .text-two{
+  font-size: 14px;
+  color: #afafb6;
+}
+.container .content .right-side{
+  width: 75%;
+  margin-left: 75px;
+}
+.content .right-side .topic-text{
+  font-size: 23px;
+  font-weight: 600;
+  color: #53bd84;
+}
+.right-side .input-box{
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+}
+.right-side .input-box input,
+.right-side .input-box textarea{
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+.right-side .message-box{
+  min-height: 110px;
+}
+.right-side .input-box textarea{
+  padding-top: 6px;
+}
+.right-side .button{
+  display: inline-block;
+  margin-top: 12px;
+}
+.right-side .button {
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #53bd84;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+.button :hover{
+  background: #53bd84;
+}
+@media(max-width: 700px){
+  header h1, header p
+  {
+    text-align: center;
+    font-size: 20px;
+  }
+  .main, .right {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .container{
+    margin: 40px 0;
+    height: 100%;
+  }
+  .container .content{
+    flex-direction: column-reverse;
+  }
+  .container .content .left-side{
+    width: 100%;
+    flex-direction: row;
+    margin-top: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .container .content .left-side::before{
+    display: none;
+  }
+  .container .content .right-side{
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
